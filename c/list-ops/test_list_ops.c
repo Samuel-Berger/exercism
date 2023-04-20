@@ -107,7 +107,7 @@ static void test_append_empty_lists(void)
 
 static void test_append_list_to_empty_list(void)
 {
-   TEST_IGNORE();               // delete this line to run test
+   // TEST_IGNORE();               // delete this line to run test
    list_t *list1 = new_list(0, NULL);
    list_t *list2 = new_list(3, (list_element_t[]){ 1, 3, 4 });
    size_t expected_length = 3;

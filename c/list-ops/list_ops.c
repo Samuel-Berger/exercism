@@ -2,29 +2,31 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// numer of elements, list of elements in the list.
 list_t *new_list(size_t length, list_element_t elements[])
 {
-    printf("Elements?: %lu.\n", sizeof(&elements));
-    printf("Length?: %lu.\n", length);
+    list_t *list;
+    list = malloc(sizeof(&elements) * length);
 
-    // list_t *allocList = calloc(length, sizeof(&elements));
-    // return allocList;
-
-    list_t *roman;
-    roman = malloc(sizeof(char) * 100);
-
-    return roman;
+    return list;
 }
 
 list_t *append_list(list_t * list1, list_t * list2){
     
-    printf("%lu", sizeof(list1));
-    printf("%lu", sizeof(list2));
+    for (int i = 0; i < 3; i++)
+    {
+        printf("Thingy is at place %i.\n", i);
+    }
+    
 
-    return list1;
+    list_t *appendedList;
+    appendedList = new_list(list1->length+list2->length,
+    NULL);
+    
+    return appendedList;
 }
 
 void delete_list(list_t * list) {
-        printf("%lu", sizeof(&list));
+        printf("Delete list not implemented. Size of list: %lu.\n", sizeof(&list));
 }
 
